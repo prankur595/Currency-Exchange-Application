@@ -13,3 +13,11 @@ Currency Exchange Service
 http://<hostname>:8000/currency-exchange/from/USD/to/INR                                    #replace hostname with your service's external ip
 Currency Conversion Service
 http://<hostname>:8100/currency-conversion-feign/from/USD/to/INR/quantity/10                #replace hostname with your service's external ip
+
+
+You may also use Yaml files:
+kubernetes_Build_files/cuurency-exchange-service-deployment.yaml
+kubectl apply -f cuurency-exchange-service-deployment.yaml
+
+kubernetes_Build_files/cuurency-conversion-service-deployment.yaml
+kubectl apply -f cuurency-conversion-service-deployment.yaml
