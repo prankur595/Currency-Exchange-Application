@@ -1,0 +1,6 @@
+For Docker build:
+download images from drive.
+upload them to your docker using: docker load command
+create container with all of them:
+Run docker compose file provided in 
+
