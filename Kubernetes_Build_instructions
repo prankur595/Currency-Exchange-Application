@@ -1,0 +1,15 @@
+Instructions for Kubernetes build:
+
+kubernetes images can be pulled from: 
+
+deploy the images using:
+kubectl create deployment currency-exchange --image=pbishnoi595/mmv3-currency-exchange-service:0.0.11-SNAPSHOT
+kubectl expose deployment currency-exchange --type=LoadBalancer --port=8000
+
+kubectl create deployment currency-conversion --image=pbishnoi595/mmv3-currency-conversion-service:0.0.11-SNAPSHOT
+kubectl expose deployment currency-conversion --type=LoadBalancer --port=8100
+
+Currency Exchange Service
+http://<hostname>:8000/currency-exchange/from/USD/to/INR                                    #replace hostname with your service's external ip
+Currency Conversion Service
+http://<hostname>:8100/currency-conversion-feign/from/USD/to/INR/quantity/10                #replace hostname with your service's external ip
