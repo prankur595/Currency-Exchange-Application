@@ -2,5 +2,26 @@ For Docker build:
 download images from drive.
 upload them to your docker using: docker load command
 create container with all of them:
-Run docker compose file provided in 
+Run docker compose file provided.
+
+Access the following URLs once the deployment of the containers is done:
+
+Currency Exchange Service
+http://localhost:8000/currency-exchange/from/USD/to/INR
+
+Currency Conversion Service
+http://localhost:8100/currency-conversion/from/USD/to/INR/quantity/10           #Restricted, won't work
+http://localhost:8100/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+Eureka
+http://localhost:8761/
+
+Zipkin
+http://localhost:9411/
+
+API GATEWAY
+http://localhost:8765/currency-exchange/from/USD/to/INR
+http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10           #Restricted, won't work
+http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10
 
